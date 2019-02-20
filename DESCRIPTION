@@ -1,13 +1,22 @@
 Package: fannieapi
-Title: What the Package Does (One Line, Title Case)
+Title: A R interface for accessing The Exchange, which is Fannie Mae's public API
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Saad",
+           family = "Aslam",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "saad.aslam39@gmail.com")
+Description: The fannieapi package is an R interface to Fannie Mae's public API. The package may be used to access Fannie Mae's publicly available datasets on macroeconomic and housing industry specific indicators, as well as survey results from the national housing survey and data points for the home purchase sentiment index. 
+License: MIT + file LICENSE 
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
+Imports: 
+  dplyr,
+  httr,
+  jsonlite,
+  tidyr,
+  glue,
+  janitor,
+  purrr
