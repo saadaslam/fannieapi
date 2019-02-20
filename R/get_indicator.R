@@ -7,7 +7,7 @@
 #'
 #' @details
 #'
-#' This function has access to the following indicator series for housing specific data:
+#' This function has access to the following indicator series for **economic** specific data:
 #'
 #' * gross-domestic-product
 #' * personal-consumption-expenditures
@@ -26,6 +26,26 @@
 #' * federal-funds-rate
 #' * 1-year-treasury-note-yield
 #' * 10-year-treasury-bond-yield
+#'
+#' Data specific to **housing** includes:
+#'
+#' * fannie-mae-hpi
+#' * federal-housing-finance-agency-purchase-only-index
+#' * 30-year-fixed-rate-mortgage
+#' * 5-year-adjustable-rate-mortgage
+#' * 1-year-adjustable-rate-mortgage
+#' * mortgage-originations-combined
+#' * mortgage-originations-purchase
+#' * mortgage-originations-refinance
+#' * mortgage-originations-refinance-share-percent
+#' * housing-starts-all
+#' * housing-starts-single-family
+#' * housing-starts-multi-family
+#' * new-single-family-home-sales
+#' * total-existing-home-sales
+#' * total-home-sales
+#' * median-new-home-price
+#' * median-total-existing
 #'
 #' @export
 #'
