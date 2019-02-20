@@ -1,26 +1,15 @@
-get_econ_ind <-
-  function(indicator = c(
-    'gross-domestic-product',
-    'residential-fixed-investment',
-    'business-fixed-investment',
-    'government-consumption-and-investment',
-    'net-exports',
-    'change-in-business-inventories',
-    'gdp-price-index',
-    'consumer-price-index',
-    'consumer-price-index-excl-food-and-energy',
-    'unemployment-rate-percent',
-    'employment-total-nonfarm-percent-change-quarterly-saar-annual-q4-q4',
-    'federal-funds-rate',
-    '1-year-treasury-note-yield',
-    '10-year-treasury-bond-yield',
-    'personal-consumption-expenditures',
-    'personal-chain-expenditures-chain-price-index',
-    'personal-chain-expenditures-chain-price-index-excl-food-and-energy',
-    'gdp-percent-change-year-over-year'
-  )) {
-    url_path <- paste0(econ_ind_path, indicator)
-    url_string <- httr::modify_url(api_url, path = url_path)
+get_indicator <-
+  function(category = c("economic", "housing"),
+           indicator) {
+    if (category == "housing")
+      catg_path <- "housing-indicators"
+    else if (category == "economic")
+      catg_path <- "economic-forecasts"
+
+    indicator_path <-
+      glue::glue("/v1/{catg_path}/indicators/{indicator}")
+
+    url_string <- httr::modify_url(api_url, path = indicator_path)
 
     response <- get_url(url_string)
 
@@ -29,10 +18,8 @@ get_econ_ind <-
 
     tbl <- dplyr::tibble(l1 = time_series)
 
-    tbl <- dplyr::mutate(
-      tbl,
-      name = purrr::map(l1, names)
-    )
+    tbl <- dplyr::mutate(tbl,
+                         name = purrr::map(l1, names))
 
     tbl <- tidyr::unnest(tbl, l1, name, .id = "id")
 
@@ -40,14 +27,13 @@ get_econ_ind <-
 
     tbl <- janitor::clean_names(tbl, "snake")
 
-    tbl <- tidyr::unnest(tbl, effective_date, indicator_name, .id = "id3")
+    tbl <-
+      tidyr::unnest(tbl, effective_date, indicator_name, .id = "id3")
 
     tbl <- tidyr::unnest(tbl, points, .id = "id4")
 
-    tbl <- dplyr::mutate(
-      tbl,
-      point_names = purrr::map(points, ~ names(.x))
-    )
+    tbl <- dplyr::mutate(tbl,
+                         point_names = purrr::map(points, ~ names(.x)))
 
     tbl <- tidyr::unnest(tbl, points, point_names, .id = "id5")
 
@@ -76,7 +62,14 @@ get_econ_ind <-
       eoy_flag = dplyr::if_else(month == "EOY", TRUE, FALSE)
     )
 
-    result <- dplyr::select(tbl, report_date = effective_date, indicator_name, forecast, indicator_val_dt, eoy_flag, value)
+    result <-
+      dplyr::select(tbl,
+                    report_date = effective_date,
+                    indicator_name,
+                    forecast,
+                    indicator_val_dt,
+                    eoy_flag,
+                    value)
 
     result <- dplyr::arrange(result, report_date, indicator_val_dt)
 
