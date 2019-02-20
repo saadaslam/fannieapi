@@ -3,7 +3,3 @@
 export(get_indicator)
 export(get_url)
 export(set_api_key)
-import(dplyr)
-import(httr)
-import(jsonlite)
-import(tidyr)

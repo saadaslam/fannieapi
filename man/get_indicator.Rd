@@ -18,7 +18,7 @@ A \code{grouped_df} that is grouped by the column \code{report_date}.
 Get economic or housing indicators
 }
 \details{
-This function has access to the following indicator series for housing specific data:
+This function has access to the following indicator series for \strong{economic} specific data:
 \itemize{
 \item gross-domestic-product
 \item personal-consumption-expenditures
@@ -37,6 +37,27 @@ This function has access to the following indicator series for housing specific 
 \item federal-funds-rate
 \item 1-year-treasury-note-yield
 \item 10-year-treasury-bond-yield
+}
+
+Data specific to \strong{housing} includes:
+\itemize{
+\item fannie-mae-hpi
+\item federal-housing-finance-agency-purchase-only-index
+\item 30-year-fixed-rate-mortgage
+\item 5-year-adjustable-rate-mortgage
+\item 1-year-adjustable-rate-mortgage
+\item mortgage-originations-combined
+\item mortgage-originations-purchase
+\item mortgage-originations-refinance
+\item mortgage-originations-refinance-share-percent
+\item housing-starts-all
+\item housing-starts-single-family
+\item housing-starts-multi-family
+\item new-single-family-home-sales
+\item total-existing-home-sales
+\item total-home-sales
+\item median-new-home-price
+\item median-total-existing
 }
 }
 \examples{
