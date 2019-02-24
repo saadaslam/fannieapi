@@ -60,9 +60,7 @@ get_indicator <- function(category = c("economic", "housing"), indicator) {
 
     indicator_path <- glue::glue("/v1/{catg_path}/indicators/{indicator}")
 
-    url_string <- httr::modify_url(api_url, path = indicator_path)
-
-    response <- get_url(url_string)
+    response <- get_url(indicator_path)
 
     time_series <- response$content[["indicatorTimeSeries"]]
 
