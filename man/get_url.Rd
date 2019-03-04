@@ -2,12 +2,12 @@
 % Please edit documentation in R/get_url.R
 \name{get_url}
 \alias{get_url}
-\title{Call a particular URL from Fannie Mae's public API.}
+\title{A call from Fannie Mae's public API given the API's path.}
 \usage{
-get_url(url)
+get_url(path)
 }
 \arguments{
-\item{url}{The URL. This should start with "https://api.theexchange.fanniemae.com/".}
+\item{path}{This is the API's path after the origin URL.}
 }
 \value{
 A list with the following elements:
@@ -15,12 +15,12 @@ A list with the following elements:
 \item content -- The parsed JSON returned from API call.
 Note that the object is returned as a nested list.
 \item url -- The URL used to make the call
-\item response -- The response object created by \code{httr::GET}
+\item response -- The response object created by \code{\link[httr:GET]{httr::GET()}}
 }
 }
 \description{
-Call a particular URL from Fannie Mae's public API.
+A call from Fannie Mae's public API given the API's path.
 }
 \examples{
-get_url("https://api.theexchange.fanniemae.com/v1/mortgage-lender-sentiment/results")
+get_url("/v1/mortgage-lender-sentiment/results")
 }

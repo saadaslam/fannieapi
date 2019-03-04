@@ -1,0 +1,20 @@
+question,question_num,question_sub,loan_type,question_short
+Q6a,6,a,GSE Elgible,Purchase Mortgage Demand - Past 3 Months
+Q6b,6,b,Non-GSE Eligible,Purchase Mortgage Demand - Past 3 Months
+Q6c,6,c,Government,Purchase Mortgage Demand - Past 3 Months
+Q10a,10,a,GSE Elgible,Refinance Mortgage Demand - Past 3 Months
+Q10b,10,b,Non-GSE Eligible,Refinance Mortgage Demand - Past 3 Months
+Q10c,10,c,Government,Refinance Mortgage Demand - Past 3 Months
+Q14a,14,a,GSE Elgible,Purchase Mortgage Demand - Next 3 Months
+Q14b,14,b,Non-GSE Eligible,Purchase Mortgage Demand - Next 3 Months
+Q14c,14,c,Government,Purchase Mortgage Demand - Next 3 Months
+Q18a,18,a,GSE Elgible,Refinance Mortgage Demand - Next 3 Months
+Q18b,18,b,Non-GSE Eligible,Refinance Mortgage Demand - Next 3 Months
+Q18c,18,c,Government,Refinance Mortgage Demand - Next 3 Months
+Q22,22,,N/A,Expected Change in Profit Margins - Next 3 Months
+Q27a,27,a,GSE Elgible,Change In Credit Standards - Past 3 Months
+Q27b,27,b,Non-GSE Eligible,Change In Credit Standards - Past 3 Months
+Q27c,27,c,Government,Change In Credit Standards - Past 3 Months
+Q31a,31,a,GSE Elgible,Change in Credit Standards - Next 3 Months
+Q31b,31,b,Non-GSE Eligible,Change in Credit Standards - Next 3 Months
+Q31c,31,c,Government,Change in Credit Standards - Next 3 Months

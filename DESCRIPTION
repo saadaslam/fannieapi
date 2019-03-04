@@ -20,3 +20,5 @@ Imports:
   glue,
   janitor,
   purrr
+Suggests: 
+    testthat

@@ -1,0 +1,23 @@
+question_id,question_desc,question_ans
+Q10,In general do you think our economy is on the right track or is it off on the wrong track?,Right track
+Q10,In general do you think our economy is on the right track or is it off on the wrong track?,Wrong track
+Q11,"Looking ahead one year, do you expect your personal financial situation to get much better, somewhat better, stay about the same, get somewhat worse, or get much worse?",Much better/Somewhat better
+Q11,"Looking ahead one year, do you expect your personal financial situation to get much better, somewhat better, stay about the same, get somewhat worse, or get much worse?",Much worse/Somewhat worse
+Q112B,"How concerned are you that you will lose your job in the next twelve months? Are you very concerned, somewhat concerned, not very concerned, or not at all concerned that you will lose your job in the next twelve months?",Not at all concerned/Somewhat concerned
+Q112B,"How concerned are you that you will lose your job in the next twelve months? Are you very concerned, somewhat concerned, not very concerned, or not at all concerned that you will lose your job in the next twelve months?",Very concerned/Somewhat concerned
+Q116,How does your current monthly household income compare to what it was twelve months ago? Would you say it is,Significantly higher now
+Q116,How does your current monthly household income compare to what it was twelve months ago? Would you say it is,Significantly lower now
+Q12,"In general, do you think this is a very good time to buy a house, a somewhat good time, a somewhat bad time, or a very bad time to buy a house?",Very good time/Somewhat good time
+Q12,"In general, do you think this is a very good time to buy a house, a somewhat good time, a somewhat bad time, or a very bad time to buy a house?",Very bad time/Somewhat bad time
+Q13,"In general, do you think this is a very good time to sell a house, a somewhat good time, a somewhat bad time, or a very bad time to sell a house?",Very good time/Somewhat good time
+Q13,"In general, do you think this is a very good time to sell a house, a somewhat good time, a somewhat bad time, or a very bad time to sell a house?",Very bad time/Somewhat bad time
+Q15,"During the next 12 months, do you think home prices in general will go up, go down, or stay the same as where they are now?",Prices will go up
+Q15,"During the next 12 months, do you think home prices in general will go up, go down, or stay the same as where they are now?",Prices will go down
+Q18,"During the next 12 months, do you think home rental prices in general will go up, go down, or stay the same as where they are now?",Prices will go up
+Q18,"During the next 12 months, do you think home rental prices in general will go up, go down, or stay the same as where they are now?",Prices will go down
+Q20B,"During the next 12 months, do you think home mortgage interest rates will go up, go down, or stay the same as where they are now?",Rates will go up
+Q20B,"During the next 12 months, do you think home mortgage interest rates will go up, go down, or stay the same as where they are now?",Rates will go down
+Q22,"Do you think it would be very difficult, somewhat difficult, somewhat easy, or very easy for you to get a home mortgage today?",Very difficult/Somewhat difficult
+Q22,"Do you think it would be very difficult, somewhat difficult, somewhat easy, or very easy for you to get a home mortgage today?",Very easy/Somewhat easy
+Q31,"If you were going to move, would you be more likely to",Rent
+Q31,"If you were going to move, would you be more likely to",Buy

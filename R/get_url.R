@@ -1,21 +1,23 @@
-#' Call a particular URL from Fannie Mae's public API.
+#' A call from Fannie Mae's public API given the API's path.
 #'
-#' @param url The URL. This should start with "https://api.theexchange.fanniemae.com/".
+#' @param path This is the API's path after the origin URL.
 #'
 #' @return A list with the following elements:
 #' * content -- The parsed JSON returned from API call.
 #'   Note that the object is returned as a nested list.
 #' * url -- The URL used to make the call
-#' * response -- The response object created by `httr::GET`
+#' * response -- The response object created by [httr::GET()]
 #' @export
 #'
 #' @examples
-#' get_url("https://api.theexchange.fanniemae.com/v1/mortgage-lender-sentiment/results")
-get_url <- function(url) {
+#' get_url("/v1/mortgage-lender-sentiment/results")
+get_url <- function(path) {
 
     if (Sys.getenv("fannieapi_key") == "") {
         stop("Please set an API key with `fannieapi::set_api_key()`", call. = FALSE)
     }
+
+    url <- httr::modify_url(api_url, path = path)
 
     resp <- httr::GET(url, httr::add_headers(Authorization = Sys.getenv("fannieapi_key"), accept = "application/json"))
 
@@ -32,5 +34,5 @@ get_url <- function(url) {
             httr::status_code(resp), parsed$message), call. = FALSE)
     }
 
-    list(content = parsed, url = url, response = resp)
+    list(content = parsed, path = path, response = resp)
 }
