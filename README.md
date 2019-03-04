@@ -59,18 +59,10 @@ head(ur_data)
 #> 6 2017-01-10  unemployment-rate-p… FALSE    2004-02-15       FALSE      5.7
 ```
 
-<!-- ## Example -->
-<!-- This is a basic example which shows you how to solve a common problem: -->
-<!-- ```{r example} -->
-<!-- ## basic example code -->
-<!-- ``` -->
-<!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
-<!-- ```{r cars} -->
-<!-- summary(cars) -->
-<!-- ``` -->
-<!-- You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. -->
-<!-- You can also embed plots, for example: -->
-<!-- ```{r pressure, echo = FALSE} -->
-<!-- plot(pressure) -->
-<!-- ``` -->
-<!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub! -->
+Functionalities also exist for obtaining data from the following data sources:
+
+-   Mortgage Lender Sentiment Survey -- `get_lender_sentiment`
+-   National Housing Survey -- `get_nhs_data`
+-   Home Purchase Sentiment Index -- `get_hpsi_data`
+
+For the survey data, I stored details on the survey questions into two different datasets: `nhs_questions` for the National Housing Survey and `lender_sentiment_questions` for the Mortgage Lender Sentiment Survey.
