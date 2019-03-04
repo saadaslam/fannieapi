@@ -23,5 +23,5 @@ Get National Housing Survey data
 nhs_data <- get_nhs_data()
 }
 \seealso{
-\link{nhs_questions}
+\link{nhs_questions}, \link{get_hpsi_data}
 }

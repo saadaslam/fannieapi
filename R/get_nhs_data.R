@@ -11,7 +11,7 @@
 #' @examples
 #' nhs_data <- get_nhs_data()
 #' @seealso
-#' [nhs_questions]
+#' [nhs_questions], [get_hpsi_data]
 get_nhs_data <- function(){
   get <- get_url("/v1/nhs/results")
 
