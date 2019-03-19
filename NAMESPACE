@@ -2,6 +2,7 @@
 
 export(get_hpsi_data)
 export(get_indicator)
+export(get_indicator_all)
 export(get_lender_sentiment)
 export(get_nhs_data)
 export(get_url)

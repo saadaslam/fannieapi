@@ -47,14 +47,31 @@
 #' * median-new-home-price
 #' * median-total-existing
 #'
+#' The difference between `get_indicator` and `get_indicator_all` is that the latter gets
+#'   data for all report dates. For example, `get_indicator_all` will include revised forecasts over time.
+#'   The former will get you the latest report with end of year values removed.
+#'
 #' @export
 #'
 #' @examples
 #' get_indicator("economic", "gross-domestic-product")
 #' get_indicator("housing", "housing-starts-single-family")
+#'
+#' ## This gets all reports on GDP and single family housing starts
+#' get_indicator_all("economic", "gross-domestic-product")
+#' get_indicator_all('housing', 'housing-starts-single-family')
+#'
+#' ## quick plotting is better suited with `get_indicator`
+#' gdp <- get_indicator('economic', 'gross-domestic-product')
+#' ggplot(gdp,
+#'   aes(x = indicator_val_dt, y = value, linetype = forecast)
+#' ) +
+#' geom_line(size = 1)
+#'
 #' @seealso
 #' [get_url()]
-get_indicator <- function(category = c("economic", "housing"), indicator) {
+#' @rdname get_indicator
+get_indicator_all <- function(category = c("economic", "housing"), indicator) {
     if (category == "housing") catg_path <- "housing-indicators"
     else if (category == "economic") catg_path <- "economic-forecasts"
 
@@ -126,4 +143,15 @@ get_indicator <- function(category = c("economic", "housing"), indicator) {
 
     result
 
+}
+
+#' @rdname get_indicator
+#' @export
+
+get_indicator <- function(category = c("economic", "housing"), indicator) {
+  data <- ungroup(get_indicator_all(category, indicator))
+  filter(data,
+         report_date == max(report_date),
+         eoy_flag == FALSE
+  )
 }
