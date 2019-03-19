@@ -149,8 +149,8 @@ get_indicator_all <- function(category = c("economic", "housing"), indicator) {
 #' @export
 
 get_indicator <- function(category = c("economic", "housing"), indicator) {
-  data <- ungroup(get_indicator_all(category, indicator))
-  filter(data,
+  data <- dplyr::ungroup(get_indicator_all(category, indicator))
+  dplyr::filter(data,
          report_date == max(report_date),
          eoy_flag == FALSE
   )
